@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil de la Película</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="pelicula-list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <br>
+  <div class="text-center">
+    <p>¿Quieres buscar alguna <strong>película</strong>? <a href="buscar">Buscar</a></p>
+  </div>
+<div *ngIf="movie">
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+      <img *ngIf="movie.poster_path; else noImage" alt="Movies" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="img-fluid poster"/>
+      <ng-template #noImage>
+        <img alt="Default image" src="../../assets/no-image.jpg" class="img-fluid poster"/>
+      </ng-template>
+      <ion-card-header>
+        <ion-card-title>{{movie.title}}</ion-card-title>
+        <ion-card-subtitle><strong>{{movie.tagline}}</strong></ion-card-subtitle>
+        <div class="text-white text-center">
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 1"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 2"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 3"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 4"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 5"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 6"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 7"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 8"></i>
+          <i class="fa fa-star" *ngIf="movie.vote_average >= 9"></i>
+        </div>
+        <div class="text-white text-center">
+          {{movie.vote_average | number:'1.1-2'}}
+        </div>
+        <h4>({{movie.original_title}})</h4>
+        <hr>
+        <p>{{movie.release_date}}</p>
+        <br>
+        <a href="{{movie.homepage}}">{{movie.homepage}}</a>
+        <br>
+        <ion-button (click)="SheredSocial()">
+          <ion-button expand="block"> compatir </ion-button>
+        </ion-button>
+        <p>{{movie.overview}}</p>
+      </ion-card-header>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+</ion-content> 

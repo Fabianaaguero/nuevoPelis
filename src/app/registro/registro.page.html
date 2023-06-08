@@ -1,0 +1,28 @@
+<ion-content>
+  <h1> PeliApp </h1>
+<ion-card class=" Registro">
+  <ion-card-header class=" Registro">
+    <ion-card-title class="text-center" >Registro</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form class="ion-text-center">
+      <ion-item>
+        <ion-label position="floating" >Nombre</ion-label>
+        <ion-input name="nombre" [(ngModel)]="registroUsuario.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input name="email" [(ngModel)]="registroUsuario.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label icon="lock-closed-outline" position="floating" >Conraseña</ion-label>
+        <ion-input name="password" [(ngModel)]="registroUsuario.password" type="password"></ion-input>
+      </ion-item>
+      <br>
+      <ion-button (click)="registrar()" >Registrar
+      </ion-button> 
+      <ion-button href="/login">Volver</ion-button>
+    </form>
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista de las Peliculas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <div class="text-center">
+    <p>¿Quieres buscar alguna <strong>película</strong>? <a href="/buscar">Buscar</a></p>
+  </div>
+  <hr>
+ <ion-grid>
+  <ion-row>
+    <ion-col sizeMd="4" offsetMd="4">
+      <ion-list>
+        <ion-item *ngFor="let pel of peliculas" href="/profile/{{pel['id']}}">    
+            <ion-card class="ion-text-center">
+              <img *ngIf="pel.poster_path; else noImage" alt="Silhouette of mountains" src="https://image.tmdb.org/t/p/w500{{pel.poster_path}}" class="img-fluid poster"/>
+              <ng-template #noImage>
+                <img alt="Default image" src="../../assets/no-image.jpg" class="img-fluid poster"/>
+              </ng-template>
+              <ion-card-header>
+                <ion-card-title>{{pel.title}}</ion-card-title>
+                <div class="text-white text-center">
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 1"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 2"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 3"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 4"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 5"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 6"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 7"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 8"></i>
+                  <i class="fa fa-star" *ngIf="pel.vote_average >= 9"></i>
+                </div>
+                <div class="text-white text-center">
+                  {{pel.vote_average | number:'1.1-2'}}
+                </div>
+                <ion-card-subtitle>{{pel.release_date}}</ion-card-subtitle>
+                <br>
+              </ion-card-header>
+            </ion-card>
+        </ion-item>
+        <div class="text-center">
+          <h6><strong>Desarrollado por:</strong></h6>
+           <p>Larry González</p>
+        </div>
+     </ion-list>
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+</ion-content>
