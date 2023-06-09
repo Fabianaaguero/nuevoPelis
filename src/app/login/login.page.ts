@@ -58,7 +58,7 @@ export class LoginPage implements OnInit {
     } else {
       const alert = await this.alertButtons.create({
         header: 'Error',
-        subHeader: 'Los campos no son válidos',
+        subHeader: 'Compruebe su conexion a internet',
         buttons: ['Aceptar'],
       });
       await alert.present();
