@@ -23,9 +23,9 @@ export class DbMovieService {
   
 
   //listado de peliculas 
-  ListMovie(){
+  ListMovie(page : number){
     let peliculas : object;
-    return this.http.get<CarteleraResponse>('https://api.themoviedb.org/3/movie/now_playing?api_key=f94aa13f0bf3664d4f542fa08948a210&language=en-US&page=1');
+    return this.http.get<CarteleraResponse>('https://api.themoviedb.org/3/movie/now_playing?api_key=f94aa13f0bf3664d4f542fa08948a210&language=en-US&page='+ page);
   }
 
   //descripcion de peliculas 
