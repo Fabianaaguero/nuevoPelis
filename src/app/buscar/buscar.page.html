@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <hr>
   <div class="text-center">
-    <label>Buscar</label>
+    <label class="busc">Buscar</label>
     <br>
     <input #txtBuscar
             (keyup.enter)="buscarPelicula(txtBuscar.value)"
@@ -52,10 +52,6 @@
                 </ion-card-header>
               </ion-card>
           </ion-item>
-          <div class="text-center">
-            <h6><strong>Desarrollado por:</strong></h6>
-             <p>Larry González</p>
-          </div>
        </ion-list>
       </ion-col>
     </ion-row>
