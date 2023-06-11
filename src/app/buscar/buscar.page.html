@@ -9,7 +9,15 @@
 
 <ion-content [fullscreen]="true">
   <hr>
-  <div class="text-center">
+  <ion-row>
+    <ion-col>
+      <ion-searchbar placeholder="Buscar...." id="miCampo" #txtBuscar (keyup.enter)="SearCharacters(txtBuscar.value) " >
+
+      </ion-searchbar>
+    </ion-col>
+  </ion-row>
+
+  <!-- <div class="text-center">
     <label class="busc">Buscar</label>
     <br>
     <input #txtBuscar
@@ -19,13 +27,13 @@
             placeholder="Buscar Pelicula"
             aria-label="Search"
             id="miCampo">
-  </div>
+  </div> -->
   <hr>
   <ion-grid>
     <ion-row>
       <ion-col sizeMd="4" offsetMd="4">
         <ion-list>
-          <ion-item *ngFor="let pel of peliculas" href="/profile/{{pel['id']}}">    
+          <ion-item *ngFor="let pel of characters" href="/profile/{{pel['id']}}">    
               <ion-card class="ion-text-center">
                 <img *ngIf="pel.poster_path; else noImage" alt="Silhouette of mountains" src="https://image.tmdb.org/t/p/w500{{pel.poster_path}}" class="img-fluid poster"/>
                 <ng-template #noImage>
