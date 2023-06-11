@@ -15,14 +15,44 @@
   <div id="container">
     <h2><strong>¿Quieres ver alguna película?</strong></h2>
     <p class="p1">Busca en nuetra App los estrenos más recientes</p>
-    <a href="/buscar">Buscar</a>
+    <!-- <a href="/buscar">Buscar</a> -->
     <hr>
-    <ion-button href="/pelicula-list">
-      <ion-button expand="block">Ver...</ion-button>
-    </ion-button>
+    <ion-button shape="round" href="/buscar"> Buscar 
+        <ion-icon slot="end" name="search-sharp"></ion-icon>
+      </ion-button>
+    <hr>
+    
+      <ion-button  shape="round" href="/pelicula-list"color="secondary" >Ver...
+        <ion-icon  slot="end"  name="rocket-sharp"></ion-icon>
+      </ion-button>
     <hr>
     <p>Un mundo de películas...</p>
     <br>
+
+
+    <ion-card class="centro" color="primary">
+      <ion-card-header>
+        <ion-card-title> Desarrollado por :</ion-card-title>
+        <ion-card-subtitle>Fabiana  Aguero </ion-card-subtitle>
+
+        <ion-card-subtitle>Gina  Cascio</ion-card-subtitle>
+
+        <ion-card-subtitle>Bianca Cascio</ion-card-subtitle>
+
+        <ion-card-subtitle>Larry Gonzalez</ion-card-subtitle>
+
+        <ion-card-subtitle>Nicolas Strasberg</ion-card-subtitle>
+
+        <ion-card-subtitle>Joskeiner Simosa</ion-card-subtitle>
+
+        <ion-card-subtitle> Las tecnologias utilizadas en el proyecto :<br>
+          <ion-icon name="logo-firebase"></ion-icon><ion-icon name="logo-npm"></ion-icon> <ion-icon name="logo-capacitor"></ion-icon><ion-icon name="logo-github"></ion-icon> <ion-icon name="logo-nodejs"></ion-icon><ion-icon name="logo-ionic"></ion-icon><ion-icon name="logo-angular"></ion-icon></ion-card-subtitle>
+      </ion-card-header>
+  
+    </ion-card>
+
+
+
     <a class="sal" (click)="salir()"><strong>Salir</strong></a>
   </div>
 </ion-content>
