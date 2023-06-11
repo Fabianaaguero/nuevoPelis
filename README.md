@@ -6,4 +6,4 @@ IFTS1111
 Abrir firebase y entrar con la cuenta de arriba.
 $ npm i --save firebase @angular/fire
 
-Modificar ruta en app-routing.module     profile/:id
+
