@@ -7,12 +7,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  name="top">
   <br>
-  <div class="text-center">
+  <!-- <div class="text-center">
     <p>¿Quieres buscar alguna <strong>película</strong>? <a href="/buscar">Buscar</a></p>
-  </div>
-  <hr>
+  </div> -->
+  <hr >
  <ion-grid>
   <ion-row>
     <ion-col sizeMd="4" offsetMd="4">
@@ -44,6 +44,8 @@
               </ion-card-header>
             </ion-card>
         </ion-item>
+        <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        </ion-fab>
           <ion-infinite-scroll threshold="25%" position="bottom" (ionInfinite)="GetChacters($event)">
             <ion-infinite-scroll-content>
 
@@ -53,4 +55,19 @@
     </ion-col>
   </ion-row>
  </ion-grid>
+ <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+
+    <ion-icon name="add-circle-sharp"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button  href="/buscar">
+      <ion-icon name="search-sharp"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button (click)="scrollToTop()"> 
+      <ion-icon name="arrow-up-circle-sharp"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab-list>
+</ion-fab>
 </ion-content>
