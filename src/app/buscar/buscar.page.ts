@@ -11,7 +11,7 @@ import { DbMovieService } from '../services/db-movie.service';
   styleUrls: ['./buscar.page.scss'],
 })
 export class BuscarPage implements OnInit {
-
+  characters : any= [];
   peliculas: any;
   constructor(
     private ApiMovieService:DbMovieService
@@ -20,20 +20,34 @@ export class BuscarPage implements OnInit {
   ngOnInit() {
   }
 
-  buscarPelicula(texto: String){
-    texto = texto.trim();
-    if(texto.length === 0){
-      return;
-    }
 
-    this.ApiMovieService.SearchForId(texto)
-    .subscribe((data: any)=>{
-      //console.log(data);
-      this.peliculas=data.results;
-      const miCampo = document.getElementById("miCampo") as HTMLInputElement;
-    miCampo.value = "";
+
+
+  SearCharacters(text : any){
+    //console.log(text);
+    text= text.trim();
+    this.ApiMovieService.SearchForId(text).subscribe(res =>{
+          //console.log(res);
+          this.characters = res.results;
+          //console.log(this.characters)
+          const miCampo = document.getElementById("miCampo") as HTMLInputElement;
+          miCampo.value = "";
     })
-    //console.log(texto);
+
+  // buscarPelicula(texto: String){
+  //   texto = texto.trim();
+  //   if(texto.length === 0){
+  //     return;
+  //   }
+
+  //   this.ApiMovieService.SearchForId(texto)
+  //   .subscribe((data: any)=>{
+  //     //console.log(data);
+  //     this.peliculas=data.results;
+  //     const miCampo = document.getElementById("miCampo") as HTMLInputElement;
+  //   miCampo.value = "";
+  //   })
+  //   //console.log(texto);
   }
 
 }
