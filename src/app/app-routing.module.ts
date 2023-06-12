@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'profile/:id',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },  {
+    path: 'recuperar-contra',
+    loadChildren: () => import('./recuperar-contra/recuperar-contra.module').then( m => m.RecuperarContraPageModule)
   },
+
 ];
 
 @NgModule({

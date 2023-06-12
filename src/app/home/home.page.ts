@@ -10,8 +10,4 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  salir() {
-    this.router.navigate(['/login'])
-  }
-
 }
