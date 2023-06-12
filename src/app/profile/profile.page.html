@@ -21,6 +21,7 @@
       </ng-template>
       <ion-card-header>
         <ion-card-title>{{movie.title}}</ion-card-title>
+        <hr>
         <ion-card-subtitle><strong>{{movie.tagline}}</strong></ion-card-subtitle>
         <div class="text-white text-center">
           <i class="fa fa-star" *ngIf="movie.vote_average >= 1"></i>
@@ -32,24 +33,29 @@
           <i class="fa fa-star" *ngIf="movie.vote_average >= 7"></i>
           <i class="fa fa-star" *ngIf="movie.vote_average >= 8"></i>
           <i class="fa fa-star" *ngIf="movie.vote_average >= 9"></i>
+        
         </div>
         <div class="text-white text-center">
+          <strong> valoracion :</strong>
           {{movie.vote_average | number:'1.1-2'}}
         </div>
-        <h4>({{movie.original_title}})</h4>
-        <hr>
-        <p>{{movie.release_date}}</p>
         <br>
-        <a href="{{movie.homepage}}">{{movie.homepage}}</a>
+        <h4> <strong>Titulo original: </strong>({{movie.original_title}})</h4>
+        <hr>
+        <p><strong>Fecha de lanzamiento: </strong> {{movie.release_date}}</p>
+        <br>
+        <strong>Web: </strong>
+        <a href="{{movie.homepage}}">{{movie.homepage == "" ? 'No Tiene sitio wed' : movie.homepage}}</a>
         <br>
         
           <ion-button (click)="SheredSocial()"  shape="round" color="tertiary"> compartir  
             <ion-icon slot="end" name="share-social-outline"></ion-icon>
           </ion-button>
-        <p>{{movie.overview}}</p>
+          <p><strong>Descripción: </strong>{{movie.overview}}</p>
       </ion-card-header>
     </ion-card-content>
   </ion-card>
 </div>
 
 </ion-content> 
+//movie.vote_average |
