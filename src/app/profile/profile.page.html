@@ -45,7 +45,7 @@
         <p><strong>Fecha de lanzamiento: </strong> {{movie.release_date}}</p>
         <br>
         <strong>Web: </strong>
-        <a href="{{movie.homepage}}">{{movie.homepage == "" ? 'No Tiene sitio wed' : movie.homepage}}</a>
+        <a href='{{movie.homepage != "" ? movie.homepage : "https://www.themoviedb.org/" }}'>{{movie.homepage == "" ? 'No Tiene sitio wed' : movie.homepage}}</a>
         <br>
         
           <ion-button (click)="SheredSocial()"  shape="round" color="tertiary"> compartir  
