@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecuperarContraPageRoutingModule } from './recuperar-contra-routing.module';
 
 import { RecuperarContraPage } from './recuperar-contra.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecuperarContraPageRoutingModule
+    RecuperarContraPageRoutingModule,
+    SharedModule
   ],
   declarations: [RecuperarContraPage]
 })
