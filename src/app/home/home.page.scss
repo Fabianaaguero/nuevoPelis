@@ -6,6 +6,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+
 }
 
 .centro{
@@ -40,4 +41,24 @@
 
 .p1 {
   padding: 0 5px;
+}
+
+// esta media es para que se vea completa la pantalla ya que la barra del header tapa algunas partes 
+@media (max-height: 730px){
+  #container > h2{
+    margin-top: 10%;
+  }
+
+}
+
+@media(max-height: 610px){
+  #container > h2{
+    margin-top: 43vh;
+  }
+}
+
+@media(max-height: 520px){
+  #container > h2{
+    margin-top: 65vh;
+  }
 }
