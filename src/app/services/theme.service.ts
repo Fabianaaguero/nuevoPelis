@@ -28,6 +28,6 @@ export class ThemeService {
     }
 
     this.darkMode.next(darkMode)
-    //localStorage.setItem('darkMode', JSON.stringify(darkMode))
+    localStorage.setItem('darkMode', JSON.stringify(darkMode))
   }
 }
