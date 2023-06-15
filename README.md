@@ -41,13 +41,13 @@ npm install -g typescript [![TypeScript Version](https://img.shields.io/badge/Ty
 
 ## Contribución
 
-este proyecto fue desarrollado por :
-joskeiner simosa 
-nicolas Strasberg 
-Larry Gonzalez 
-Bianca Cascio 
-Gina Cascio 
-Fabiana Aguero
+este proyecto fue desarrollado por :<br>
+:art: :fire: :rocket: joskeiner simosa <br>
+:art: :fire: :rocket: nicolas Strasberg <br>
+:art: :fire: :rocket: Larry Gonzalez <br>
+:art: :fire: :rocket: Bianca Cascio <br>
+:art: :fire: :rocket: Gina Cascio <br>
+:art: :fire: :rocket: Fabiana Aguero
 
 ## Licencia
 
