@@ -20,9 +20,10 @@
         <ion-input name="password" [(ngModel)]="registroUsuario.password" type="password"></ion-input>
       </ion-item>
       <br>
-      <ion-button (click)="registrar()" >Registrar
-      </ion-button> 
-      <ion-button href="/login">Volver</ion-button>
+      <ion-button (click)="registrar()" class="ion-margin-vertical ion-text-center " color="tertiary" shape="round">
+        Registrar
+      <ion-icon slot="end" name="person-add-outline"></ion-icon>
+      </ion-button>
     </form>
   </ion-card-content>
 </ion-card>

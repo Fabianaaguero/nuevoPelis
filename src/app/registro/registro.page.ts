@@ -55,6 +55,13 @@ export class RegistroPage implements OnInit {
         buttons: ['Aceptar'],
       });
       await alert.present();
+    } else if (code == 'auth/missing-password') {
+      const alert = await this.alertButtons.create({
+        header: 'Error',
+        subHeader: 'Debe ingresar una contraseña',
+        buttons: ['Aceptar'],
+      });
+      await alert.present();
     } else {
       const alert = await this.alertButtons.create({
         header: 'Error',

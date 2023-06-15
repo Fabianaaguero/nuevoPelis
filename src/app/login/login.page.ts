@@ -55,6 +55,13 @@ export class LoginPage implements OnInit {
         buttons: ['Aceptar'],
       });
       await alert.present();
+    } else if (code == 'auth/missing-password') {
+      const alert = await this.alertButtons.create({
+        header: 'Error',
+        subHeader: 'Debe ingresar una contraseña',
+        buttons: ['Aceptar'],
+      });
+      await alert.present();
     } else {
       const alert = await this.alertButtons.create({
         header: 'Error',
@@ -71,3 +78,4 @@ export class LoginPage implements OnInit {
 // auth/invalid-email
 // auth/user-not-found
 // auth/wrong-password
+// auth/missing-password
