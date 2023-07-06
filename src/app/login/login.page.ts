@@ -65,7 +65,7 @@ export class LoginPage implements OnInit {
     } else {
       const alert = await this.alertButtons.create({
         header: 'Error',
-        subHeader: 'Compruebe su conexion a internet',
+        subHeader: 'Por favor, vuelva a intentarlo',
         buttons: ['Aceptar'],
       });
       await alert.present();
