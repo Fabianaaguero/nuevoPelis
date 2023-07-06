@@ -1,7 +1,10 @@
+LINK APK 
+https://drive.google.com/file/d/1-1ko3O8PbOmZrRNDKHnugQSakXQ1zjWU/view?usp=sharing
+
 
 Cuenta firebase:
 appsmovilesifts@gmail.com
-IFTS1111
+
 
 Abrir firebase y entrar con la cuenta de arriba.
 $ npm i --save firebase @angular/fire
